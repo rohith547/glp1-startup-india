@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GLP-1 / Peptide Startup — India Business Blueprint</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --card: #1a1d27;
+      --border: #2a2d3e;
+      --accent: #6c63ff;
+      --accent2: #00d4aa;
+      --accent3: #ff6584;
+      --accent4: #ffa34d;
+      --text: #e2e8f0;
+      --muted: #8892a4;
+      --green: #22c55e;
+      --red: #ef4444;
+      --yellow: #f59e0b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #1a1d27 0%, #0f1117 50%, #1a1230 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 40px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(108,99,255,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(108,99,255,0.15);
+      border: 1px solid rgba(108,99,255,0.4);
+      color: #a78bfa;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 52px);
+      font-weight: 800;
+      background: linear-gradient(135deg, #e2e8f0 30%, #6c63ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 640px;
+      margin: 0 auto 30px;
+    }
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .hero-meta span {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .hero-meta strong { color: var(--accent2); }
+
+    /* ── LAYOUT ── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 60px 0; border-bottom: 1px solid var(--border); }
+    .section:last-child { border-bottom: none; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+    .section-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .section-header h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .section-header p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 2px;
+    }
+
+    /* ── NAV ── */
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin: 40px auto;
+      max-width: 1200px;
+    }
+    .toc h3 {
+      color: var(--accent2);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 10px;
+    }
+    .toc a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toc a:hover {
+      color: var(--text);
+      border-color: var(--border);
+      background: rgba(255,255,255,0.03);
+    }
+    .toc-num {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+      min-width: 20px;
+    }
+
+    /* ── CARDS ── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card p { color: var(--muted); font-size: 14px; }
+
+    /* ── PHASES ── */
+    .phase {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .phase::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      border-radius: 16px 0 0 16px;
+    }
+    .phase-1::before { background: var(--accent); }
+    .phase-2::before { background: var(--accent2); }
+    .phase-3::before { background: var(--accent4); }
+    .phase-4::before { background: var(--accent3); }
+
+    .phase-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .phase-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .phase-num {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+    }
+    .phase-1 .phase-num { background: rgba(108,99,255,0.2); color: var(--accent); }
+    .phase-2 .phase-num { background: rgba(0,212,170,0.2); color: var(--accent2); }
+    .phase-3 .phase-num { background: rgba(255,163,77,0.2); color: var(--accent4); }
+    .phase-4 .phase-num { background: rgba(255,101,132,0.2); color: var(--accent3); }
+
+    .phase h3 { font-size: 18px; font-weight: 700; color: #fff; }
+    .phase-sub { color: var(--muted); font-size: 13px; }
+
+    .timeline-badge {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .task-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .task-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 14px;
+      color: var(--muted);
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.025);
+      border-radius: 8px;
+    }
+    .task-list li .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+    .phase-1 .dot { background: var(--accent); }
+    .phase-2 .dot { background: var(--accent2); }
+    .phase-3 .dot { background: var(--accent4); }
+    .phase-4 .dot { background: var(--accent3); }
+
+    /* ── TABLE ── */
+    .tbl-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    thead { background: rgba(108,99,255,0.1); }
+    thead th {
+      padding: 14px 18px;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+    tbody tr {
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      transition: background 0.15s;
+    }
+    tbody tr:hover { background: rgba(255,255,255,0.025); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody td { padding: 14px 18px; color: var(--muted); vertical-align: top; }
+    tbody td:first-child { color: var(--text); font-weight: 600; }
+
+    /* ── BADGES ── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-red    { background: rgba(239,68,68,0.15);   color: #ef4444; border: 1px solid rgba(239,68,68,0.3); }
+    .badge-green  { background: rgba(34,197,94,0.15);   color: #22c55e; border: 1px solid rgba(34,197,94,0.3); }
+    .badge-yellow { background: rgba(245,158,11,0.15);  color: #f59e0b; border: 1px solid rgba(245,158,11,0.3); }
+    .badge-purple { background: rgba(108,99,255,0.15);  color: #a78bfa; border: 1px solid rgba(108,99,255,0.3); }
+    .badge-teal   { background: rgba(0,212,170,0.15);   color: #00d4aa; border: 1px solid rgba(0,212,170,0.3); }
+
+    /* ── ALERT ── */
+    .alert {
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      font-size: 14px;
+    }
+    .alert-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+    .alert-red   { background: rgba(239,68,68,0.08);  border: 1px solid rgba(239,68,68,0.25);  color: #fca5a5; }
+    .alert-green { background: rgba(34,197,94,0.08);  border: 1px solid rgba(34,197,94,0.25);  color: #86efac; }
+    .alert-yellow{ background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.25); color: #fde68a; }
+
+    /* ── PEOPLE GRID ── */
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 18px;
+    }
+    .person-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      transition: border-color 0.2s;
+    }
+    .person-card:hover { border-color: var(--accent); }
+    .person-avatar {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+    .person-card h4 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+    .person-card .role { font-size: 12px; color: var(--accent); font-weight: 600; margin-bottom: 10px; letter-spacing: 0.5px; text-transform: uppercase; }
+    .person-card p { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+    .person-card .salary { font-size: 13px; color: var(--accent2); font-weight: 600; }
+    .person-card .timing { font-size: 12px; color: var(--muted); }
+    .must-badge { display: inline-block; background: rgba(239,68,68,0.15); color: #ef4444; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; margin-left: 6px; text-transform: uppercase; }
+    .nice-badge { display: inline-block; background: rgba(245,158,11,0.15); color: #f59e0b; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; margin-left: 6px; text-transform: uppercase; }
+
+    /* ── COST SUMMARY ── */
+    .cost-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 14px;
+    }
+    .cost-row:last-child { border-bottom: none; }
+    .cost-label { color: var(--muted); }
+    .cost-value { color: var(--text); font-weight: 700; }
+    .cost-total {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      background: rgba(108,99,255,0.1);
+      border: 1px solid rgba(108,99,255,0.3);
+      border-radius: 12px;
+      margin-top: 16px;
+    }
+    .cost-total span { font-size: 14px; color: var(--muted); }
+    .cost-total strong { font-size: 22px; color: var(--accent); font-weight: 800; }
+
+    /* ── TECH STACK ── */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+    }
+    .stack-item {
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      font-size: 14px;
+    }
+    .stack-item .layer { font-size: 11px; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
+    .stack-item .tech { color: var(--text); font-weight: 600; }
+    .stack-item .why { color: var(--muted); font-size: 12px; margin-top: 4px; }
+
+    /* ── REVENUE ── */
+    .revenue-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .rev-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+    }
+    .rev-card .rev-icon { font-size: 24px; margin-bottom: 10px; }
+    .rev-card h4 { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .rev-card .rev-price { font-size: 20px; font-weight: 800; color: var(--accent2); margin-bottom: 6px; }
+    .rev-card p { font-size: 13px; color: var(--muted); }
+
+    /* ── LEGAL RISKS ── */
+    .risk-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 14px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .risk-level { flex-shrink: 0; padding-top: 2px; }
+    .risk-item h4 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+    .risk-item p { font-size: 13px; color: var(--muted); }
+    .risk-item .mitigation { font-size: 13px; color: var(--accent2); margin-top: 6px; }
+    .risk-item .mitigation::before { content: '→ '; }
+
+    /* ── FOOTER ── */
+    .footer {
+      text-align: center;
+      padding: 40px 24px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+    .footer strong { color: var(--text); }
+
+    /* ── DIVIDER ── */
+    .divider { height: 1px; background: var(--border); margin: 28px 0; }
+
+    /* ── CHECKLIST ── */
+    .checklist { list-style: none; }
+    .checklist li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 8px 0;
+      font-size: 14px;
+      color: var(--muted);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist .chk { color: var(--green); font-size: 16px; flex-shrink: 0; }
+    .checklist .x   { color: var(--red);   font-size: 16px; flex-shrink: 0; }
+    .checklist .w   { color: var(--yellow); font-size: 16px; flex-shrink: 0; }
+
+    /* ── COMPETITOR TABLE SPECIAL ── */
+    .comp-win { color: var(--green); font-weight: 600; }
+    .comp-opp { color: var(--accent2); }
+
+    @media (max-width: 640px) {
+      .hero { padding: 40px 20px 36px; }
+      .section { padding: 40px 0; }
+      .phase-header { flex-direction: column; align-items: flex-start; }
+      .toc-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════ HERO ════════ -->
+<div class="hero">
+  <div class="hero-badge">Confidential Business Blueprint</div>
+  <h1>GLP-1 &amp; Metabolic Health<br/>Startup — India</h1>
+  <p>A complete end-to-end guide covering legal setup, tech, marketing, hiring, and phased execution for launching a compliant GLP-1 telehealth platform in India.</p>
+  <div class="hero-meta">
+    <span>🎯 Market Size: <strong>₹1,200 Cr (2025) → ₹5,000 Cr (2030)</strong></span>
+    <span>💊 Drug Focus: <strong>Semaglutide + Tirzepatide</strong></span>
+    <span>📍 Market: <strong>India (B2C + B2B)</strong></span>
+    <span>📅 Prepared: <strong>April 2026</strong></span>
+  </div>
+</div>
+
+<!-- ════════ TABLE OF CONTENTS ════════ -->
+<div class="toc container">
+  <h3>📋 Table of Contents</h3>
+  <div class="toc-grid">
+    <a href="#overview"><span class="toc-num">01</span> Market Overview</a>
+    <a href="#legal"><span class="toc-num">02</span> Legal Framework</a>
+    <a href="#risks"><span class="toc-num">03</span> Legal Risks</a>
+    <a href="#phases"><span class="toc-num">04</span> Execution Phases</a>
+    <a href="#tech"><span class="toc-num">05</span> Tech &amp; Software</a>
+    <a href="#people"><span class="toc-num">06</span> Who To Hire</a>
+    <a href="#marketing"><span class="toc-num">07</span> Marketing Plan</a>
+    <a href="#revenue"><span class="toc-num">08</span> Revenue Streams</a>
+    <a href="#costs"><span class="toc-num">09</span> Full Cost Breakdown</a>
+    <a href="#competitors"><span class="toc-num">10</span> Competitor Analysis</a>
+    <a href="#maintenance"><span class="toc-num">11</span> Maintenance Plan</a>
+    <a href="#action"><span class="toc-num">12</span> Action Plan (Week 1)</a>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ════════ 01 MARKET OVERVIEW ════════ -->
+<section class="section" id="overview">
+  <div class="section-header">
+    <div class="section-icon" style="background:rgba(108,99,255,0.15)">📊</div>
+    <div>
+      <h2>01 — Market Overview</h2>
+      <p>Why GLP-1 drugs in India right now is a generational opportunity</p>
+    </div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>💊 What Are GLP-1 Drugs?</h3>
+      <p>GLP-1 receptor agonists (Ozempic = Semaglutide, Mounjaro = Tirzepatide) are injectable drugs originally for Type 2 diabetes, now proven to reduce body weight by 15–22%. Tirzepatide is ~2× more effective than semaglutide for weight loss. Both are now CDSCO-approved in India.</p>
+    </div>
+    <div class="card">
+      <h3>📈 Why Now — The Patent Cliff</h3>
+      <p>Semaglutide's Indian patent <strong style="color:var(--accent2)">expired March 2026</strong>. 40+ generic versions now launching. Price dropped from ₹8,800/month → ₹1,290/month. This makes treatment accessible to the Indian middle class for the first time — a tipping point moment.</p>
+    </div>
+    <div class="card">
+      <h3>🇮🇳 India's Obesity Crisis</h3>
+      <p>India has 135M+ obese adults (3rd largest globally). 77M+ diabetics. Urban prevalence rising sharply. Less than 3% of eligible patients are currently treated for obesity — a massive unmet need with virtually no brand loyalty yet established.</p>
+    </div>
+    <div class="card">
+      <h3>🌐 Peptides Opportunity</h3>
+      <p>Research peptides (BPC-157, TB-500) for recovery, healing, and regenerative wellness are growing fast globally. India is a major API manufacturer. However these are NOT approved for human medical use — must be positioned carefully as research/wellness products, not medicine.</p>
+    </div>
+    <div class="card">
+      <h3>💰 Market Numbers</h3>
+      <p>
+        <strong style="color:var(--text)">₹1,200 Cr</strong> <span style="color:var(--muted)">— India GLP-1 market (2025)</span><br/>
+        <strong style="color:var(--text)">₹5,000 Cr</strong> <span style="color:var(--muted)">— Projected by 2030</span><br/>
+        <strong style="color:var(--text)">13–14% CAGR</strong> <span style="color:var(--muted)">— Global peptide market</span><br/>
+        <strong style="color:var(--text)">&lt;3%</strong> <span style="color:var(--muted)">— Treatment penetration today</span>
+      </p>
+    </div>
+    <div class="card">
+      <h3>🎯 Your Business Model</h3>
+      <p>A <strong style="color:var(--accent)">specialized telehealth + digital pharmacy platform</strong> for metabolic health. Patients get doctor consult → e-prescription → generic GLP-1 delivered → ongoing monitoring. Think "Noom meets a licensed Indian pharmacy" but built for GLP-1 specifically.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 02 LEGAL FRAMEWORK ════════ -->
+<section class="section" id="legal">
+  <div class="section-header">
+    <div class="section-icon" style="background:rgba(239,68,68,0.15)">⚖️</div>
+    <div>
+      <h2>02 — Legal Framework</h2>
+      <p>Every license, regulation, and compliance requirement you must satisfy</p>
+    </div>
+  </div>
+
+  <div class="alert alert-red">
+    <div class="alert-icon">🚨</div>
+    <div><strong>Non-negotiable:</strong> You cannot launch a single feature that touches drug sales or medical consultations without the proper licenses. CDSCO and state drug authorities are actively cracking down on unauthorized online pharmacies and GLP-1 marketing. Build legal from day one.</div>
+  </div>
+
+  <div class="tbl-wrap" style="margin-bottom:28px">
+    <table>
+      <thead>
+        <tr>
+          <th>License / Registration</th>
+          <th>Authority</th>
+          <th>Required For</th>
+          <th>Cost</th>
+          <th>Timeline</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Private Limited Company</td>
+          <td>MCA (Ministry of Corporate Affairs)</td>
+          <td>Business entity — needed before everything else</td>
+          <td>₹10,000–₹50,000</td>
+          <td>7–14 days</td>
+        </tr>
+        <tr>
+          <td>GST Registration</td>
+          <td>GST Council</td>
+          <td>All commercial operations</td>
+          <td>Free</td>
+          <td>3–5 days</td>
+        </tr>
+        <tr>
+          <td>Wholesale Drug License (Form 20/21)</td>
+          <td>State Drug Control Office</td>
+          <td>Wholesale distribution of prescription drugs</td>
+          <td>₹3,000–₹7,500</td>
+          <td>30–90 days</td>
+        </tr>
+        <tr>
+          <td>Retail Drug License</td>
+          <td>State Drug Control Office</td>
+          <td>Retail pharmacy operations (if selling direct)</td>
+          <td>₹5,000–₹15,000</td>
+          <td>30–90 days</td>
+        </tr>
+        <tr>
+          <td>CDSCO Product Registration</td>
+          <td>CDSCO (Central)</td>
+          <td>Registering each drug product you stock/sell</td>
+          <td>₹50,000–₹2L per product</td>
+          <td>3–6 months</td>
+        </tr>
+        <tr>
+          <td>ABDM HIP Registration</td>
+          <td>NHA (National Health Authority)</td>
+          <td>Generating e-prescriptions, ABHA integration</td>
+          <td>Free (mandatory)</td>
+          <td>2–4 weeks</td>
+        </tr>
+        <tr>
+          <td>Registered Pharmacist on Payroll</td>
+          <td>Pharmacy Council of India</td>
+          <td>Mandatory for any drug license</td>
+          <td>₹4–8L/yr salary</td>
+          <td>Before license</td>
+        </tr>
+        <tr>
+          <td>NMC-Registered Doctors</td>
+          <td>National Medical Commission</td>
+          <td>All telemedicine consultations</td>
+          <td>Commission-based</td>
+          <td>Onboarding 1–2 months</td>
+        </tr>
+        <tr>
+          <td>DPDP Compliance</td>
+          <td>MeitY</td>
+          <td>Handling patient personal/health data</td>
+          <td>₹50K–₹2L (legal + tech)</td>
+          <td>Ongoing</td>
+        </tr>
+        <tr>
+          <td>ISO 27001 (Optional but recommended)</td>
+          <td>Third party auditor</td>
+          <td>Data security certification — builds trust</td>
+          <td>₹3–8L</td>
+          <td>3–6 months</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="color:#fff;margin-bottom:16px;font-size:18px;">✅ What You CAN Do &nbsp;&nbsp; ❌ What You CANNOT Do</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;flex-wrap:wrap">
+    <div class="card">
+      <h3 style="color:var(--green)">✅ Allowed</h3>
+      <ul class="checklist">
+        <li><span class="chk">✓</span> Sell CDSCO-approved drugs with valid prescription</li>
+        <li><span class="chk">✓</span> Telemedicine consultations via NMC-registered doctors</li>
+        <li><span class="chk">✓</span> Generate e-prescriptions via ABDM platform</li>
+        <li><span class="chk">✓</span> Deliver drugs via licensed pharmacy partner</li>
+        <li><span class="chk">✓</span> Market semaglutide/tirzepatide for approved indications (diabetes + BMI ≥30 obesity)</li>
+        <li><span class="chk">✓</span> Cold-chain delivery with proper storage</li>
+        <li><span class="chk">✓</span> Subscription-based wellness programs</li>
+        <li><span class="chk">✓</span> Lab test ordering and monitoring</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--red)">❌ Prohibited</h3>
+      <ul class="checklist">
+        <li><span class="x">✗</span> OTC or no-prescription drug sales online</li>
+        <li><span class="x">✗</span> Marketing GLP-1 as "quick-fix weight loss" or "cosmetic"</li>
+        <li><span class="x">✗</span> Selling research peptides (BPC-157, TB-500) as medicines</li>
+        <li><span class="x">✗</span> Non-NMC registered doctors prescribing</li>
+        <li><span class="x">✗</span> Storing health data outside India</li>
+        <li><span class="x">✗</span> Fee-splitting between platform and doctors</li>
+        <li><span class="x">✗</span> Schedule X drug prescriptions via telemedicine</li>
+        <li><span class="x">✗</span> Misleading claims about drug efficacy</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <h3 style="color:#fff;margin-bottom:16px;font-size:18px;">📋 Telemedicine Prescription Rules</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Drug Category</th><th>First Video Consult</th><th>Audio / Text Re-Rx</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>OTC Drugs (List O)</td>
+          <td><span class="badge badge-green">✓ Allowed</span></td>
+          <td><span class="badge badge-green">✓ Allowed</span></td>
+          <td>Any mode, any consult</td>
+        </tr>
+        <tr>
+          <td>Prescription Drugs — Semaglutide, Tirzepatide (List A)</td>
+          <td><span class="badge badge-green">✓ Video Required</span></td>
+          <td><span class="badge badge-yellow">⚡ Within 6 months</span></td>
+          <td>First Rx must be video; re-Rx within 6 months of in-person</td>
+        </tr>
+        <tr>
+          <td>Schedule X (Narcotics / Psychotropics)</td>
+          <td><span class="badge badge-red">✗ Prohibited</span></td>
+          <td><span class="badge badge-red">✗ Prohibited</span></td>
+          <td>Cannot be e-prescribed under any circumstances</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ════════ 03 LEGAL RISKS ════════ -->
+<section class="section" id="risks">
+  <div class="section-header">
+    <div class="section-icon" style="background:rgba(239,68,68,0.15)">🛡️</div>
+    <div>
+      <h2>03 — Legal Risks &amp; Mitigations</h2>
+      <p>Know the landmines before you step on them</p>
+    </div>
+  </div>
+
+  <div class="risk-item">
+    <div class="risk-level"><span class="badge badge-red">HIGH</span></div>
+    <div>
+      <h4>Selling without proper drug license</h4>
+      <p>Operating an online pharmacy without a wholesale/retail drug license is a criminal offense under the Drugs and Cosmetics Act. Penalty: imprisonment up to 3 years + fine + license cancellation.</p>
+      <div class="mitigation">Get wholesale drug license before any drug-related feature goes live. Partner with a pre-licensed pharmacy initially.</div>
+    </div>
+  </div>
+
+  <div class="risk-item">
+    <div class="risk-level"><span class="badge badge-red">HIGH</span></div>
+    <div>
+      <h4>Unauthorized/misleading drug marketing</h4>
+      <p>CDSCO actively monitors social media and digital ads for unlicensed claims about GLP-1 drugs. Marketing as "weight loss miracle" or "fat burner" without approved indications triggers enforcement action.</p>
+      <div class="mitigation">All marketing copy must be reviewed by your regulatory lawyer. Only claim CDSCO-approved indications. No before/after imagery without medical disclaimers.</div>
+    </div>
+  </div>
+
+  <div class="risk-item">
+    <div class="risk-level"><span class="badge badge-red">HIGH</span></div>
+    <div>
+      <h4>Non-NMC doctor consultations</h4>
+      <p>If an unregistered practitioner prescribes on your platform, both the doctor and the platform face criminal liability under the Indian Medical Council Act and Consumer Protection Act.</p>
+      <div class="mitigation">Build NMC registration verification API into your onboarding flow. No doctor goes live without verified NMC number cross-checked against the official registry.</div>
+    </div>
+  </div>
+
+  <div class="risk-item">
+    <div class="risk-level"><span class="badge badge-yellow">MEDIUM</span></div>
+    <div>
+      <h4>Patient data breach (DPDP Act 2023)</h4>
+      <p>Health data is "sensitive personal data." A breach or storing data outside India violates the Digital Personal Data Protection Act 2023. Penalties up to ₹250 Crore per incident.</p>
+      <div class="mitigation">Host all data on Indian servers (AWS Mumbai, Google Cloud Mumbai). Implement encryption at rest and in transit. Hire a Data Protection Officer (DPO) from day one.</div>
+    </div>
+  </div>
+
+  <div class="risk-item">
+    <div class="risk-level"><span class="badge badge-yellow">MEDIUM</span></div>
+    <div>
+      <h4>Regulatory reclassification of peptides</h4>
+      <p>Research peptides (BPC-157, TB-500) could be reclassified as prescription drugs at any point. FDA already moved on this in Feb 2026. India CDSCO may follow.</p>
+      <div class="mitigation">Do NOT position research peptides as medical products. Keep this line of business completely separate and have an exit clause ready in any partnerships.</div>
+    </div>
+  </div>
+
+  <div class="risk-item">
+    <div class="risk-level"><span class="badge badge-yellow">MEDIUM</span></div>
+    <div>
+      <h4>Cold chain logistics failure</h4>
+      <p>GLP-1 injectables require 2–8°C storage throughout the supply chain. A temperature excursion that degrades the drug and harms a patient creates product liability lawsuits.</p>
+      <div class="mitigation">Use only certified cold-chain logistics partners (Delhivery Pharma, Blue Dart). Require temperature monitoring reports on every shipment. Product liability insurance is mandatory.</div>
+    </div>
+  </div>
+
+  <div class="risk-item">
+    <div class="risk-level"><span class="badge badge-green">LOW</span></div>
+    <div>
+      <h4>GST and tax compliance</h4>
+      <p>Pharma products have varied GST rates. Incorrect classification creates audit risk.</p>
+      <div class="mitigation">Hire a CA with pharma e-commerce experience. GLP-1 drugs are typically 12% GST; consult services are 18%.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 04 EXECUTION PHASES ════════ -->
+<section class="section" id="phases">
+  <div class="section-header">
+    <div class="section-icon" style="background:rgba(0,212,170,0.15)">🗺️</div>
+    <div>
+      <h2>04 — Execution Phases</h2>
+      <p>From zero to scaled platform — broken into actionable phases</p>
+    </div>
+  </div>
+
+  <!-- Phase 1 -->
+  <div class="phase phase-1">
+    <div class="phase-header">
+      <div class="phase-title">
+        <div class="phase-num">1</div>
+        <div>
+          <h3>Foundation &amp; Legal Setup</h3>
+          <div class="phase-sub">Build the legal and business backbone before any code</div>
+        </div>
+      </div>
+      <div class="timeline-badge">Months 1 – 3</div>
+    </div>
+    <ul class="task-list">
+      <li><span class="dot"></span>Register Pvt Ltd on MCA portal (you can DIY this)</li>
+      <li><span class="dot"></span>Open a business bank account (HDFC/ICICI — pharma-friendly)</li>
+      <li><span class="dot"></span>Hire pharma regulatory consultant (₹50K–₹1L retainer)</li>
+      <li><span class="dot"></span>Apply for Wholesale Drug License via State Drug Office</li>
+      <li><span class="dot"></span>Hire a qualified registered pharmacist</li>
+      <li><span class="dot"></span>Secure compliant warehouse/storage space (with cold chain)</li>
+      <li><span class="dot"></span>Draft doctor partnership agreement (no fee-splitting clauses)</li>
+      <li><span class="dot"></span>Onboard 3–5 endocrinologists / internal medicine doctors</li>
+      <li><span class="dot"></span>Register on ABDM Sandbox — start HIP integration</li>
+      <li><span class="dot"></span>Register for GST and get PAN for the company</li>
+      <li><span class="dot"></span>Get product liability insurance quote</li>
+      <li><span class="dot"></span>Draft Privacy Policy and Terms of Service (DPDP-compliant)</li>
+    </ul>
+  </div>
+
+  <!-- Phase 2 -->
+  <div class="phase phase-2">
+    <div class="phase-header">
+      <div class="phase-title">
+        <div class="phase-num">2</div>
+        <div>
+          <h3>MVP Build &amp; Soft Launch</h3>
+          <div class="phase-sub">Core platform live — doctor consult + prescription + delivery</div>
+        </div>
+      </div>
+      <div class="timeline-badge">Months 3 – 7</div>
+    </div>
+    <ul class="task-list">
+      <li><span class="dot"></span>Build patient onboarding flow (health quiz, BMI, comorbidities)</li>
+      <li><span class="dot"></span>Video consult module (WebRTC or Daily.co integration)</li>
+      <li><span class="dot"></span>ABDM e-prescription generation and ABHA linking</li>
+      <li><span class="dot"></span>Pharmacy partner integration (order routing to licensed pharmacy)</li>
+      <li><span class="dot"></span>Razorpay payment gateway setup (with drug license docs)</li>
+      <li><span class="dot"></span>Doctor dashboard (patient queue, prescription history, follow-up)</li>
+      <li><span class="dot"></span>Basic progress tracking (weight log, side effects diary)</li>
+      <li><span class="dot"></span>Launch beta with 50–100 patients (friends, family network)</li>
+      <li><span class="dot"></span>Set up customer support (WhatsApp Business API)</li>
+      <li><span class="dot"></span>Get drug license approved (should overlap with build)</li>
+      <li><span class="dot"></span>Start SEO content production (30 articles minimum)</li>
+      <li><span class="dot"></span>Set up Google Analytics, Mixpanel, error tracking (Sentry)</li>
+    </ul>
+  </div>
+
+  <!-- Phase 3 -->
+  <div class="phase phase-3">
+    <div class="phase-header">
+      <div class="phase-title">
+        <div class="phase-num">3</div>
+        <div>
+          <h3>Growth &amp; Feature Expansion</h3>
+          <div class="phase-sub">Scale user acquisition, add retention features, expand doctor network</div>
+        </div>
+      </div>
+      <div class="timeline-badge">Months 7 – 15</div>
+    </div>
+    <ul class="task-list">
+      <li><span class="dot"></span>Launch mobile apps (React Native — iOS + Android)</li>
+      <li><span class="dot"></span>Add lab test ordering (thyroid, HbA1c, lipids panel)</li>
+      <li><span class="dot"></span>AI-driven health score and progress insights</li>
+      <li><span class="dot"></span>Subscription plan launch (all-in-one monthly package)</li>
+      <li><span class="dot"></span>Referral program and community features</li>
+      <li><span class="dot"></span>B2B portal for corporate wellness clients</li>
+      <li><span class="dot"></span>Add tirzepatide (Mounjaro generics) once obesity approval finalizes</li>
+      <li><span class="dot"></span>Expand doctor network to 25+ specialists</li>
+      <li><span class="dot"></span>Google Ads + Meta Ads campaigns</li>
+      <li><span class="dot"></span>Influencer partnerships (health/fitness space)</li>
+      <li><span class="dot"></span>Raise seed funding (₹2–5 Cr target)</li>
+      <li><span class="dot"></span>ISO 27001 certification audit</li>
+    </ul>
+  </div>
+
+  <!-- Phase 4 -->
+  <div class="phase phase-4">
+    <div class="phase-header">
+      <div class="phase-title">
+        <div class="phase-num">4</div>
+        <div>
+          <h3>Scale &amp; Market Leadership</h3>
+          <div class="phase-sub">Become the definitive GLP-1 brand in India</div>
+        </div>
+      </div>
+      <div class="timeline-badge">Month 15+</div>
+    </div>
+    <ul class="task-list">
+      <li><span class="dot"></span>Expand to Tier 2 cities (Hindi + regional language support)</li>
+      <li><span class="dot"></span>Launch white-label solution for clinics and hospitals</li>
+      <li><span class="dot"></span>Partner with insurance companies for GLP-1 coverage</li>
+      <li><span class="dot"></span>Explore own generic drug import/distribution license</li>
+      <li><span class="dot"></span>Research peptide wellness line (B2B, research-use only)</li>
+      <li><span class="dot"></span>Series A fundraise (₹15–25 Cr)</li>
+      <li><span class="dot"></span>TV / OTT advertising campaign</li>
+      <li><span class="dot"></span>Expand to Sri Lanka / Bangladesh (SAARC)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ════════ 05 TECH & SOFTWARE ════════ -->
+<section class="section" id="tech">
+  <div class="section-header">
+    <div class="section-icon" style="background:rgba(108,99,255,0.15)">💻</div>
+    <div>
+      <h2>05 — Tech &amp; Software Stack</h2>
+      <p>Everything you need to build as the founder-developer</p>
+    </div>
+  </div>
+
+  <div class="alert alert-green">
+    <div class="alert-icon">💡</div>
+    <div><strong>Your Advantage:</strong> As a developer who knows Next.js + Prisma (already in your project), you can save ₹25–60 Lakh in tech costs. Focus your budget on compliance, cold chain, and marketing instead.</div>
+  </div>
+
+  <div class="stack-grid" style="margin-bottom:28px">
+    <div class="stack-item">
+      <div class="layer">Frontend</div>
+      <div class="tech">Next.js 14 (App Router)</div>
+      <div class="why">SEO-critical for medical content. Fast, SSR, great DX.</div>
+    </div>
+    <div class="stack-item">
+      <div class="layer">Backend API</div>
+      <div class="tech">Node.js + Fastify</div>
+      <div class="why">Fast, lightweight. Easy ABDM FHIR API integration.</div>
+    </div>
+    <div class="stack-item">
+      <div class="layer">Database</div>
+      <div class="tech">PostgreSQL + Prisma</div>
+      <div class="why">You already know this. HIPAA-grade structure for health records.</div>
+    </div>
+    <div class="stack-item">
+      <div class="layer">Auth</div>
+      <div class="tech">NextAuth.js + OTP</div>
+      <div class="why">Indian users expect mobile OTP login (no passwords).</div>
+    </div>
+    <div class="stack-item">
+      <div class="layer">Video Consult</div>
+      <div class="tech">Daily.co or Jitsi</div>
+      <div class="why">HIPAA-compliant video, embeddable, low latency in India.</div>
+    </div>
+    <div class="stack-item">
+      <div class="layer">Payments</div>
+      <div class="tech">Razorpay</div>
+      <div class="why">UPI + cards. Supports pharma merchants with license docs.</div>
+    </div>
+    <div class="stack-item">
+      <div class="layer">ABDM / Health Stack</div>
+      <div class="tech">ABDM FHIR R4 APIs</div>
+      <div class="why">E-prescriptions, ABHA linking — mandatory for compliance.</div>
+    </div>
+    <div class="stack-item">
+      <div class="layer">Notifications</div>
+      <div class="tech">WhatsApp Business API + FCM</div>
+      <div class="why">India's primary communication channel. Push for app.</div>
+    </div>
+    <div class="stack-item">
+      <div class="layer">Email</div>
+      <div class="tech">Resend or AWS SES</div>
+      <div class="why">Transactional emails — prescriptions, reminders, reports.</div>
+    </div>
+    <div class="stack-item">
+      <div class="layer">Storage</div>
+      <div class="tech">AWS S3 (Mumbai region)</div>
+      <div class="why">Data localization — must store in India. Lab reports, prescriptions.</div>
+    </div>
+    <div class="stack-item">
+      <div class="layer">Monitoring</div>
+      <div class="tech">Sentry + Grafana + PagerDuty</div>
+      <div class="why">Medical platform downtime is a compliance risk, not just UX issue.</div>
+    </div>
+    <div class="stack-item">
+      <div class="layer">Mobile App</div>
+      <div class="tech">React Native (Phase 3)</div>
+      <div class="why">Share 80% code with web. Build mobile in Phase 3 when you have revenue.</div>
+    </div>
+    <div class="stack-item">
+      <div class="layer">Analytics</div>
+      <div class="tech">Mixpanel + GA4</div>
+      <div class="why">Track funnel drop-offs, prescription completions, retention.</div>
+    </div>
+    <div class="stack-item">
+      <div class="layer">CRM</div>
+      <div class="tech">HubSpot (free tier first)</div>
+      <div class="why">Patient follow-up, doctor onboarding, B2B pipeline tracking.</div>
+    </div>
+    <div class="stack-item">
+      <div class="layer">CI/CD</div>
+      <div class="tech">GitHub Actions + Vercel</div>
+      <div class="why">You know this workflow. Fast deploy, preview deployments.</div>
+    </div>
+    <div class="stack-item">
+      <div class="layer">Security</div>
+      <div class="tech">Vault + AWS KMS</div>
+      <div class="why">Encrypt sensitive health data at rest. Audit logs for DPDP.</div>
+    </div>
+  </div>
+
+  <h3 style="color:#fff;margin-bottom:16px;font-size:18px;">🔑 ABDM E-Prescription Integration (Key API Flow)</h3>
+  <div class="card" style="font-family:monospace;font-size:13px;line-height:1.8;background:#0d0f18;">
+    <div style="color:var(--muted);margin-bottom:8px;">// 1. Link patient's ABHA health ID</div>
+    <div style="color:var(--accent2)">POST /v1/patients/discover</div>
+    <div style="color:var(--muted)">{ abhaId: "patient@abdm", mobile: "+91XXXXXXXXXX" }</div>
+    <br/>
+    <div style="color:var(--muted)">// 2. Request patient consent before any health data exchange</div>
+    <div style="color:var(--accent2)">POST /v1/consents/requests</div>
+    <div style="color:var(--muted)">{ patientId: "...", purpose: "CARE_MANAGEMENT" }</div>
+    <br/>
+    <div style="color:var(--muted)">// 3. Doctor generates e-prescription (FHIR MedicationRequest)</div>
+    <div style="color:var(--accent2)">POST /v1/health-information/eprescription</div>
+    <div style="color:var(--muted)">{ resourceType: "MedicationRequest",</div>
+    <div style="color:var(--muted)">&nbsp;&nbsp;medicationCodeableConcept: { text: "Semaglutide 0.5mg/week" },</div>
+    <div style="color:var(--muted)">&nbsp;&nbsp;subject: { reference: "Patient/abha-id" },</div>
+    <div style="color:var(--muted)">&nbsp;&nbsp;requester: { reference: "Practitioner/nmc-reg-id" } }</div>
+    <br/>
+    <div style="color:var(--muted)">// 4. Notify gateway — prescription now discoverable by patient &amp; pharmacy</div>
+    <div style="color:var(--accent2)">POST /v1/notifications/health-information</div>
+    <br/>
+    <div style="color:var(--muted)">// Sandbox: sandbox.abdm.gov.in &nbsp;|&nbsp; Docs: docs.abdm.gov.in &nbsp;|&nbsp; Code: github.com/ndhm-india</div>
+  </div>
+</section>
+
+<!-- ════════ 06 WHO TO HIRE ════════ -->
+<section class="section" id="people">
+  <div class="section-header">
+    <div class="section-icon" style="background:rgba(255,163,77,0.15)">👥</div>
+    <div>
+      <h2>06 — Who To Hire &amp; When</h2>
+      <p>Your full team — from day one hires to scale-up roles</p>
+    </div>
+  </div>
+
+  <h3 style="color:var(--accent);margin-bottom:18px;font-size:16px;font-weight:700;">🔴 Day 1 Hires (Before You Launch Anything)</h3>
+  <div class="people-grid" style="margin-bottom:36px">
+
+    <div class="person-card">
+      <div class="person-avatar" style="background:rgba(239,68,68,0.12)">⚖️</div>
+      <h4>Pharma Regulatory Lawyer <span class="must-badge">Must</span></h4>
+      <div class="role">Legal Compliance Lead</div>
+      <p>Handles drug licenses, CDSCO filings, telemedicine compliance, and reviews all marketing copy. Without this person you will step on a landmine.</p>
+      <div class="salary">₹1–3L/month (retainer) or ₹50K–₹1L project-based</div>
+      <div class="timing">📍 Hire: Week 1 — before any other step</div>
+    </div>
+
+    <div class="person-card">
+      <div class="person-avatar" style="background:rgba(34,197,94,0.12)">💊</div>
+      <h4>Registered Pharmacist <span class="must-badge">Must</span></h4>
+      <div class="role">Pharmacy Operations Head</div>
+      <p>Required by law to hold the drug license. Must be on payroll (not contractor). Oversees dispensing, cold chain, and drug storage compliance. B.Pharm or M.Pharm minimum.</p>
+      <div class="salary">₹4–8L/year (full-time)</div>
+      <div class="timing">📍 Hire: Month 1 — before drug license application</div>
+    </div>
+
+    <div class="person-card">
+      <div class="person-avatar" style="background:rgba(108,99,255,0.12)">🩺</div>
+      <h4>Medical Director / Lead Doctor <span class="must-badge">Must</span></h4>
+      <div class="role">Clinical Lead</div>
+      <p>NMC-registered physician (endocrinologist preferred). Owns clinical protocols, quality of care, and doctor onboarding standards. Can also do consultations initially.</p>
+      <div class="salary">₹15–30L/year or revenue share</div>
+      <div class="timing">📍 Hire: Month 1–2</div>
+    </div>
+
+    <div class="person-card">
+      <div class="person-avatar" style="background:rgba(0,212,170,0.12)">📊</div>
+      <h4>Chartered Accountant (CA) <span class="must-badge">Must</span></h4>
+      <div class="role">Finance &amp; Tax</div>
+      <p>GST for pharma is complex (12% drugs, 18% services). CA ensures correct tax treatment, invoicing to patients/doctors, and handles audits. Hire one with e-commerce/pharma experience.</p>
+      <div class="salary">₹30–60K/month (retainer)</div>
+      <div class="timing">📍 Hire: Month 1 (company registration onwards)</div>
+    </div>
+
+  </div>
+
+  <h3 style="color:var(--accent4);margin-bottom:18px;font-size:16px;font-weight:700;">🟡 Phase 2 Hires (MVP Build — Month 2–6)</h3>
+  <div class="people-grid" style="margin-bottom:36px">
+
+    <div class="person-card">
+      <div class="person-avatar" style="background:rgba(255,163,77,0.12)">✍️</div>
+      <h4>Medical Content Writer <span class="nice-badge">Key</span></h4>
+      <div class="role">SEO &amp; Content</div>
+      <p>Writes authoritative medical content — "How does semaglutide work?", "Side effects of Ozempic in Indians", "Cost of weight loss injection in India". SEO is your biggest free acquisition channel.</p>
+      <div class="salary">₹40–80K/month</div>
+      <div class="timing">📍 Hire: Month 2 — start SEO before launch</div>
+    </div>
+
+    <div class="person-card">
+      <div class="person-avatar" style="background:rgba(108,99,255,0.12)">🎨</div>
+      <h4>UI/UX Designer <span class="nice-badge">Key</span></h4>
+      <div class="role">Product Design</div>
+      <p>Designs patient journey, doctor dashboard, and mobile app. Healthcare UX needs to balance clinical clarity with warmth. Must understand mobile-first India audience.</p>
+      <div class="salary">₹6–12L/year or ₹50–80K freelance/month</div>
+      <div class="timing">📍 Hire: Month 2 (before building UI)</div>
+    </div>
+
+    <div class="person-card">
+      <div class="person-avatar" style="background:rgba(0,212,170,0.12)">📱</div>
+      <h4>Customer Support / Care Coordinator</h4>
+      <div class="role">Patient Success</div>
+      <p>Handles patient queries, WhatsApp support, appointment reminders, and escalates clinical concerns to doctors. Needs basic medical/pharma knowledge. Hindi + English essential.</p>
+      <div class="salary">₹3–5L/year</div>
+      <div class="timing">📍 Hire: Before beta launch (Month 4)</div>
+    </div>
+
+    <div class="person-card">
+      <div class="person-avatar" style="background:rgba(255,101,132,0.12)">📦</div>
+      <h4>Logistics Coordinator</h4>
+      <div class="role">Supply Chain</div>
+      <p>Manages cold-chain orders, tracks delivery SLAs, handles returns and damaged goods. Coordinates with pharmacy partner and courier (Delhivery Pharma, Blue Dart).</p>
+      <div class="salary">₹3–6L/year</div>
+      <div class="timing">📍 Hire: Month 3–4</div>
+    </div>
+
+  </div>
+
+  <h3 style="color:var(--accent2);margin-bottom:18px;font-size:16px;font-weight:700;">🟢 Phase 3 Hires (Growth — Month 7–15)</h3>
+  <div class="people-grid">
+
+    <div class="person-card">
+      <div class="person-avatar" style="background:rgba(0,212,170,0.12)">📣</div>
+      <h4>Growth / Performance Marketer</h4>
+      <div class="role">Paid Acquisition</div>
+      <p>Runs Google Ads, Meta Ads, and YouTube campaigns targeting obesity, diabetes, and weight loss keywords. Must understand pharma ad restrictions on Google/Meta.</p>
+      <div class="salary">₹8–15L/year</div>
+      <div class="timing">📍 Hire: Month 7 (when revenue funds ads)</div>
+    </div>
+
+    <div class="person-card">
+      <div class="person-avatar" style="background:rgba(108,99,255,0.12)">👨‍💻</div>
+      <h4>Full-Stack Developer (Backend)</h4>
+      <div class="role">Engineering</div>
+      <p>Takes load off you for backend API work, ABDM integrations, and infra. Lets you focus on architecture and product decisions as you scale.</p>
+      <div class="salary">₹12–20L/year</div>
+      <div class="timing">📍 Hire: Month 8–10 (when platform is stable)</div>
+    </div>
+
+    <div class="person-card">
+      <div class="person-avatar" style="background:rgba(255,163,77,0.12)">🏥</div>
+      <h4>Business Development (B2B)</h4>
+      <div class="role">Partnerships</div>
+      <p>Signs up corporate wellness clients, clinics, gyms, and insurance partnerships. Brings recurring B2B revenue which is higher margin than B2C.</p>
+      <div class="salary">₹8–14L/year + commission</div>
+      <div class="timing">📍 Hire: Month 10–12</div>
+    </div>
+
+    <div class="person-card">
+      <div class="person-avatar" style="background:rgba(255,101,132,0.12)">🔒</div>
+      <h4>Data Protection Officer (DPO)</h4>
+      <div class="role">DPDP Compliance</div>
+      <p>Mandatory under DPDP Act 2023 once you cross certain user thresholds. Oversees data privacy, breach response, and consent management. Can be outsourced initially.</p>
+      <div class="salary">₹8–15L/year (or ₹50K/month outsourced)</div>
+      <div class="timing">📍 Hire: Month 6–8</div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+  <div class="alert alert-yellow">
+    <div class="alert-icon">💡</div>
+    <div><strong>Founder Roles (You):</strong> CTO + Product. Focus on building the platform, ABDM integration, and hiring decisions. Do NOT try to run marketing or operations yourself — delegate those early. Your code quality and product vision is the unfair advantage.</div>
+  </div>
+</section>
+
+<!-- ════════ 07 MARKETING ════════ -->
+<section class="section" id="marketing">
+  <div class="section-header">
+    <div class="section-icon" style="background:rgba(255,101,132,0.15)">📣</div>
+    <div>
+      <h2>07 — Marketing Plan</h2>
+      <p>How to acquire patients and build the brand without burning cash</p>
+    </div>
+  </div>
+
+  <div class="card-grid" style="margin-bottom:28px">
+    <div class="card">
+      <h3>🔍 SEO — Your Biggest Channel</h3>
+      <p style="margin-bottom:12px">Almost no authoritative Indian content exists on GLP-1 drugs. This is a huge first-mover advantage. Target:</p>
+      <ul class="checklist" style="font-size:13px">
+        <li><span class="chk">✓</span> "Ozempic cost in India 2026"</li>
+        <li><span class="chk">✓</span> "Semaglutide doctor India online"</li>
+        <li><span class="chk">✓</span> "Weight loss injection India side effects"</li>
+        <li><span class="chk">✓</span> "Mounjaro vs Ozempic India"</li>
+        <li><span class="chk">✓</span> "How to get Wegovy prescription India"</li>
+      </ul>
+      <p style="margin-top:10px;font-size:13px;color:var(--accent2)">30 articles before launch. 2 articles/week after. Medical content writer essential.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎥 YouTube / Instagram</h3>
+      <p style="margin-bottom:12px">Video is the trust-builder in health. Content angles:</p>
+      <ul class="checklist" style="font-size:13px">
+        <li><span class="chk">✓</span> Doctor explainers: "How does semaglutide work?"</li>
+        <li><span class="chk">✓</span> Patient journey: Anonymous success stories</li>
+        <li><span class="chk">✓</span> Myth-busting: "Is Ozempic safe for Indians?"</li>
+        <li><span class="chk">✓</span> Process: "How to get a GLP-1 prescription online"</li>
+      </ul>
+      <p style="margin-top:10px;font-size:13px;color:var(--accent2)">Feature your doctors on camera — builds trust. Doctors become your brand ambassadors.</p>
+    </div>
+
+    <div class="card">
+      <h3>💰 Paid Ads (Phase 3)</h3>
+      <p style="margin-bottom:12px">Google and Meta restrict pharma ads, but there are workarounds:</p>
+      <ul class="checklist" style="font-size:13px">
+        <li><span class="chk">✓</span> Google Search: Target "weight loss doctor online India"</li>
+        <li><span class="chk">✓</span> Meta: Target by health interests, age 30–55, urban</li>
+        <li><span class="chk">✓</span> YouTube: Pre-roll on fitness / diabetes content</li>
+        <li><span class="w">⚡</span> No direct drug name ads — promote "metabolic consult"</li>
+      </ul>
+      <p style="margin-top:10px;font-size:13px;color:var(--accent2)">Budget: ₹2–5L/month in Phase 3. Target CAC &lt; ₹800.</p>
+    </div>
+
+    <div class="card">
+      <h3>🤝 Doctor / Clinic Partnerships</h3>
+      <p style="margin-bottom:12px">Doctors are your best referral channel. Strategy:</p>
+      <ul class="checklist" style="font-size:13px">
+        <li><span class="chk">✓</span> Partner with 50+ GPs who don't want to manage GLP-1 patients — refer to you</li>
+        <li><span class="chk">✓</span> Offer clinics a white-label version of your platform</li>
+        <li><span class="chk">✓</span> Present at diabetes/endocrinology CME events</li>
+        <li><span class="chk">✓</span> LinkedIn targeting for doctors</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>📊 Influencer Marketing</h3>
+      <p style="margin-bottom:12px">Health + fitness influencers (not celebrities — micro-influencers convert better):</p>
+      <ul class="checklist" style="font-size:13px">
+        <li><span class="chk">✓</span> Dietitians / nutritionists on Instagram (10K–500K followers)</li>
+        <li><span class="chk">✓</span> Fitness coaches discussing obesity science</li>
+        <li><span class="chk">✓</span> Diabetic community YouTubers</li>
+        <li><span class="w">⚡</span> All must disclose — ASCI regulations apply</li>
+      </ul>
+      <p style="margin-top:10px;font-size:13px;color:var(--accent2)">Budget: ₹1–3L/month for 10–15 micro-influencers.</p>
+    </div>
+
+    <div class="card">
+      <h3>🏢 B2B / Corporate Wellness</h3>
+      <p style="margin-bottom:12px">High-value, recurring revenue. Target:</p>
+      <ul class="checklist" style="font-size:13px">
+        <li><span class="chk">✓</span> IT companies (sedentary workforce, high obesity rates)</li>
+        <li><span class="chk">✓</span> Employee wellness programs (partner with insurance)</li>
+        <li><span class="chk">✓</span> Hospital chains wanting GLP-1 digital arm</li>
+        <li><span class="chk">✓</span> Fertility clinics (GLP-1 + PCOS/IVF link is proven)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Channel</th><th>Phase</th><th>Monthly Budget</th><th>Expected CAC</th><th>Priority</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>SEO / Content</td><td>1 onwards</td><td>₹40–80K (writer salary)</td><td>₹200–500 (organic)</td><td><span class="badge badge-green">HIGHEST</span></td></tr>
+        <tr><td>Doctor Referral Program</td><td>2 onwards</td><td>₹20–50K</td><td>₹300–600</td><td><span class="badge badge-green">HIGH</span></td></tr>
+        <tr><td>YouTube / Instagram</td><td>2 onwards</td><td>₹30–60K (production)</td><td>₹400–800</td><td><span class="badge badge-purple">HIGH</span></td></tr>
+        <tr><td>Micro-influencers</td><td>2–3</td><td>₹1–3L</td><td>₹600–1,200</td><td><span class="badge badge-yellow">MEDIUM</span></td></tr>
+        <tr><td>Google Ads</td><td>3 onwards</td><td>₹2–5L</td><td>₹700–1,500</td><td><span class="badge badge-yellow">MEDIUM</span></td></tr>
+        <tr><td>Meta Ads</td><td>3 onwards</td><td>₹1–3L</td><td>₹800–2,000</td><td><span class="badge badge-yellow">MEDIUM</span></td></tr>
+        <tr><td>WhatsApp Broadcast</td><td>2 onwards</td><td>₹10–20K</td><td>Near zero (retention)</td><td><span class="badge badge-teal">RETENTION</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ════════ 08 REVENUE STREAMS ════════ -->
+<section class="section" id="revenue">
+  <div class="section-header">
+    <div class="section-icon" style="background:rgba(0,212,170,0.15)">💰</div>
+    <div>
+      <h2>08 — Revenue Streams</h2>
+      <p>How the business makes money — multiple streams from day one</p>
+    </div>
+  </div>
+
+  <div class="revenue-grid">
+    <div class="rev-card">
+      <div class="rev-icon">🩺</div>
+      <h4>Consultation Fee</h4>
+      <div class="rev-price">₹299–₹999</div>
+      <p>Per video consult. Doctor keeps 70–80%, platform takes 20–30% facilitation fee (not fee-splitting — it's a platform fee).</p>
+    </div>
+    <div class="rev-card">
+      <div class="rev-icon">💊</div>
+      <h4>Drug Delivery Margin</h4>
+      <div class="rev-price">₹200–₹500/order</div>
+      <p>Margin on generic semaglutide/tirzepatide. Generics now as cheap as ₹1,290/month — you mark up 15–25% for logistics + service.</p>
+    </div>
+    <div class="rev-card">
+      <div class="rev-icon">📅</div>
+      <h4>Subscription Program</h4>
+      <div class="rev-price">₹2,499–₹4,999/mo</div>
+      <p>All-in-one: monthly drug supply + 2 consults + lab test + progress tracking + nutrition support. Best LTV model.</p>
+    </div>
+    <div class="rev-card">
+      <div class="rev-icon">🧪</div>
+      <h4>Lab Tests</h4>
+      <div class="rev-price">₹500–₹3,000/order</div>
+      <p>HbA1c, thyroid, lipid panel — essential monitoring for GLP-1 patients. Partner with Thyrocare / Dr. Lal PathLabs for home collection.</p>
+    </div>
+    <div class="rev-card">
+      <div class="rev-icon">🏢</div>
+      <h4>B2B Corporate Plans</h4>
+      <div class="rev-price">₹5,000–₹20,000/employee/yr</div>
+      <p>Corporate wellness packages for companies. Higher margin, predictable revenue. Target 5–10 companies by Month 12.</p>
+    </div>
+    <div class="rev-card">
+      <div class="rev-icon">🏥</div>
+      <h4>White-Label SaaS</h4>
+      <div class="rev-price">₹50,000–₹2L/clinic/mo</div>
+      <p>License your platform to clinics and hospital chains who want their own GLP-1 digital program. Phase 3+ revenue stream.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <h3 style="color:#fff;margin-bottom:16px;font-size:16px;">📈 Revenue Projections</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Month</th><th>Active Patients</th><th>Avg. Revenue/Patient/Mo</th><th>Monthly Revenue</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Month 4–6 (Beta)</td><td>50–100</td><td>₹1,500</td><td>₹75K–₹1.5L</td><td>Friends, early adopters</td></tr>
+        <tr><td>Month 7–9</td><td>200–500</td><td>₹2,000</td><td>₹4L–₹10L</td><td>SEO traffic + referrals kick in</td></tr>
+        <tr><td>Month 10–12</td><td>500–1,000</td><td>₹2,500</td><td>₹12.5L–₹25L</td><td>Paid ads starting</td></tr>
+        <tr><td>Year 2</td><td>3,000–8,000</td><td>₹3,000</td><td>₹90L–₹2.4Cr</td><td>Subscriptions dominant</td></tr>
+        <tr><td>Year 3</td><td>15,000–30,000</td><td>₹3,500</td><td>₹5.25Cr–₹10.5Cr</td><td>B2B + white-label added</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ════════ 09 COSTS ════════ -->
+<section class="section" id="costs">
+  <div class="section-header">
+    <div class="section-icon" style="background:rgba(255,163,77,0.15)">📦</div>
+    <div>
+      <h2>09 — Full Cost Breakdown</h2>
+      <p>Everything you'll spend — one-time and recurring</p>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px">
+
+    <div class="card">
+      <h3 style="color:var(--accent3);margin-bottom:16px">🔴 One-Time Setup Costs</h3>
+      <div class="cost-row"><span class="cost-label">Company registration (Pvt Ltd)</span><span class="cost-value">₹10–50K</span></div>
+      <div class="cost-row"><span class="cost-label">Wholesale Drug License</span><span class="cost-value">₹3–15K (fees)</span></div>
+      <div class="cost-row"><span class="cost-label">CDSCO product registration (2 products)</span><span class="cost-value">₹1–4L</span></div>
+      <div class="cost-row"><span class="cost-label">Legal &amp; regulatory consultant (setup)</span><span class="cost-value">₹1–3L</span></div>
+      <div class="cost-row"><span class="cost-label">Warehouse setup (cold chain)</span><span class="cost-value">₹2–5L</span></div>
+      <div class="cost-row"><span class="cost-label">ABDM integration &amp; certification</span><span class="cost-value">₹50K–₹1L</span></div>
+      <div class="cost-row"><span class="cost-label">UI/UX design (initial)</span><span class="cost-value">₹1–3L</span></div>
+      <div class="cost-row"><span class="cost-label">Product liability insurance (annual)</span><span class="cost-value">₹1–3L</span></div>
+      <div class="cost-row"><span class="cost-label">Initial drug inventory</span><span class="cost-value">₹5–15L</span></div>
+      <div class="cost-total">
+        <span>One-Time Total (conservative)</span>
+        <strong>₹12–34L</strong>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--accent4);margin-bottom:16px">🟡 Monthly Recurring (Phase 1–2)</h3>
+      <div class="cost-row"><span class="cost-label">Regulatory lawyer retainer</span><span class="cost-value">₹50–75K</span></div>
+      <div class="cost-row"><span class="cost-label">Registered pharmacist salary</span><span class="cost-value">₹35–60K</span></div>
+      <div class="cost-row"><span class="cost-label">CA (chartered accountant)</span><span class="cost-value">₹30–50K</span></div>
+      <div class="cost-row"><span class="cost-label">Medical content writer</span><span class="cost-value">₹40–80K</span></div>
+      <div class="cost-row"><span class="cost-label">Customer support staff</span><span class="cost-value">₹25–40K</span></div>
+      <div class="cost-row"><span class="cost-label">Cloud infra (AWS Mumbai)</span><span class="cost-value">₹20–50K</span></div>
+      <div class="cost-row"><span class="cost-label">SaaS tools (video, CRM, analytics)</span><span class="cost-value">₹20–40K</span></div>
+      <div class="cost-row"><span class="cost-label">Warehouse rent (cold storage)</span><span class="cost-value">₹30–80K</span></div>
+      <div class="cost-row"><span class="cost-label">Marketing (early stage SEO/content)</span><span class="cost-value">₹50–80K</span></div>
+      <div class="cost-total">
+        <span>Monthly Burn Rate (Phase 1–2)</span>
+        <strong>₹3–5.5L/mo</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="background:linear-gradient(135deg,rgba(108,99,255,0.08),rgba(0,212,170,0.06));border-color:rgba(108,99,255,0.3)">
+    <h3 style="margin-bottom:20px;font-size:18px">💰 Total Capital Required to Reach Break-Even</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px">
+      <div style="text-align:center;padding:20px;background:rgba(0,0,0,0.2);border-radius:12px">
+        <div style="font-size:28px;font-weight:800;color:var(--accent)">₹30–50L</div>
+        <div style="color:var(--muted);font-size:13px;margin-top:4px">Bootstrap (developer builds tech)</div>
+      </div>
+      <div style="text-align:center;padding:20px;background:rgba(0,0,0,0.2);border-radius:12px">
+        <div style="font-size:28px;font-weight:800;color:var(--accent2)">₹75L–1.5Cr</div>
+        <div style="color:var(--muted);font-size:13px;margin-top:4px">Funded (with outsourced tech team)</div>
+      </div>
+      <div style="text-align:center;padding:20px;background:rgba(0,0,0,0.2);border-radius:12px">
+        <div style="font-size:28px;font-weight:800;color:var(--accent4)">Month 10–14</div>
+        <div style="color:var(--muted);font-size:13px;margin-top:4px">Estimated break-even timeline</div>
+      </div>
+      <div style="text-align:center;padding:20px;background:rgba(0,0,0,0.2);border-radius:12px">
+        <div style="font-size:28px;font-weight:800;color:var(--accent3)">2–5 Cr</div>
+        <div style="color:var(--muted);font-size:13px;margin-top:4px">Seed raise target (Month 8–12)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10 COMPETITORS ════════ -->
+<section class="section" id="competitors">
+  <div class="section-header">
+    <div class="section-icon" style="background:rgba(255,101,132,0.15)">🏆</div>
+    <div>
+      <h2>10 — Competitor Analysis</h2>
+      <p>Who's in the space, what they're doing, and where you beat them</p>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Type</th>
+          <th>Strength</th>
+          <th>Their Weakness (Your Opportunity)</th>
+          <th>Threat Level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HealthifyRx</td>
+          <td>Digital health startup</td>
+          <td>Full program: app + coaching + GLP-1</td>
+          <td class="comp-opp">Expensive (₹5K+/mo), generic health app, not GLP-1-specialized UX</td>
+          <td><span class="badge badge-red">HIGH</span></td>
+        </tr>
+        <tr>
+          <td>PharmEasy / 1mg</td>
+          <td>Digital pharmacy</td>
+          <td>Brand trust, massive delivery network</td>
+          <td class="comp-opp">No clinical depth — just a drug courier. Zero patient journey or monitoring.</td>
+          <td><span class="badge badge-yellow">MEDIUM</span></td>
+        </tr>
+        <tr>
+          <td>Apollo 24/7</td>
+          <td>Hospital telehealth</td>
+          <td>Doctor trust, brand heritage, diagnostics</td>
+          <td class="comp-opp">Feels clinical/intimidating, expensive, not lifestyle-forward</td>
+          <td><span class="badge badge-yellow">MEDIUM</span></td>
+        </tr>
+        <tr>
+          <td>Sugar.fit</td>
+          <td>Metabolic health startup</td>
+          <td>App-first, good for diabetes</td>
+          <td class="comp-opp">Primarily diabetes, not purpose-built for GLP-1 weight management</td>
+          <td><span class="badge badge-yellow">MEDIUM</span></td>
+        </tr>
+        <tr>
+          <td>VLCC / FITPASS</td>
+          <td>Lifestyle/wellness</td>
+          <td>Wellness brand name, large user base</td>
+          <td class="comp-opp">Not medically credible — no prescriptions, no clinical oversight</td>
+          <td><span class="badge badge-green">LOW</span></td>
+        </tr>
+        <tr>
+          <td>Dr. Reddy's / Biocon</td>
+          <td>Pharma manufacturer</td>
+          <td>Generic drug production at scale</td>
+          <td class="comp-opp">B2B only — no patient-facing platform. Could be a supplier to you.</td>
+          <td><span class="badge badge-teal">PARTNER</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="divider"></div>
+  <div class="alert alert-green">
+    <div class="alert-icon">🎯</div>
+    <div>
+      <strong>The gap nobody fills:</strong> A beautifully designed, affordable, GLP-1-specialized platform with real clinical depth (monitoring, labs, side effect management) AND the warmth of a lifestyle brand. You're not building another pharmacy — you're building India's first <em>metabolic transformation program</em> powered by GLP-1 science.
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 11 MAINTENANCE ════════ -->
+<section class="section" id="maintenance">
+  <div class="section-header">
+    <div class="section-icon" style="background:rgba(0,212,170,0.15)">🔧</div>
+    <div>
+      <h2>11 — Maintenance Plan</h2>
+      <p>Keeping the platform compliant, secure, and growing post-launch</p>
+    </div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>🔒 Security &amp; Compliance</h3>
+      <ul class="checklist">
+        <li><span class="chk">✓</span> Monthly dependency security audits (npm audit, Snyk)</li>
+        <li><span class="chk">✓</span> Quarterly penetration testing (especially auth + prescriptions)</li>
+        <li><span class="chk">✓</span> Annual DPDP compliance review with DPO</li>
+        <li><span class="chk">✓</span> ABDM API version upgrades as NHA releases them</li>
+        <li><span class="chk">✓</span> SSL certificate renewals + monitoring</li>
+        <li><span class="chk">✓</span> Prescription record archival (7-year legal requirement)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>⚕️ Clinical &amp; Regulatory</h3>
+      <ul class="checklist">
+        <li><span class="chk">✓</span> Monthly review of CDSCO circulars for GLP-1 updates</li>
+        <li><span class="chk">✓</span> Drug license renewal (annually, state-specific)</li>
+        <li><span class="chk">✓</span> Pharmacovigilance — track and report adverse events to CDSCO</li>
+        <li><span class="chk">✓</span> Cold chain log review (temperature excursion alerts)</li>
+        <li><span class="chk">✓</span> Doctor credential re-verification annually</li>
+        <li><span class="chk">✓</span> Clinical protocol updates as new GLP-1 data emerges</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>💻 Tech Maintenance</h3>
+      <ul class="checklist">
+        <li><span class="chk">✓</span> Weekly database backups (encrypted, Mumbai region)</li>
+        <li><span class="chk">✓</span> Uptime monitoring (PagerDuty — alert if &lt;99.5%)</li>
+        <li><span class="chk">✓</span> Monthly performance audits (Lighthouse, Core Web Vitals)</li>
+        <li><span class="chk">✓</span> Feature releases every 2 weeks (sprint cycle)</li>
+        <li><span class="chk">✓</span> Video consult infrastructure load testing before campaigns</li>
+        <li><span class="chk">✓</span> Mobile app store updates (App Store + Play Store policies)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>📊 Business Metrics to Track</h3>
+      <ul class="checklist">
+        <li><span class="chk">✓</span> Patient retention at 30 / 60 / 90 days</li>
+        <li><span class="chk">✓</span> Prescription-to-delivery rate</li>
+        <li><span class="chk">✓</span> Doctor utilization rate</li>
+        <li><span class="chk">✓</span> Customer Acquisition Cost (CAC) by channel</li>
+        <li><span class="chk">✓</span> Lifetime Value (LTV) — target LTV:CAC &gt; 3:1</li>
+        <li><span class="chk">✓</span> Adverse event rate (clinical safety KPI)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 12 ACTION PLAN ════════ -->
+<section class="section" id="action">
+  <div class="section-header">
+    <div class="section-icon" style="background:rgba(108,99,255,0.15)">🚀</div>
+    <div>
+      <h2>12 — Action Plan: First 30 Days</h2>
+      <p>Concrete steps to take starting this week — no more research, start moving</p>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Week</th><th>Action</th><th>Who Does It</th><th>Cost</th><th>Output</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Week 1</td>
+          <td>Register Pvt Ltd on MCA portal (mca.gov.in)</td>
+          <td>You (founder)</td>
+          <td>₹10–20K</td>
+          <td>Company CIN number</td>
+        </tr>
+        <tr>
+          <td>Week 1</td>
+          <td>Find &amp; brief a pharma regulatory consultant (LinkedIn, Bar Council)</td>
+          <td>You</td>
+          <td>₹0 (search phase)</td>
+          <td>3–5 candidate CVs</td>
+        </tr>
+        <tr>
+          <td>Week 1</td>
+          <td>Create account on ABDM Sandbox — explore e-prescription APIs</td>
+          <td>You (dev)</td>
+          <td>Free</td>
+          <td>API familiarity</td>
+        </tr>
+        <tr>
+          <td>Week 2</td>
+          <td>Hire regulatory consultant (retainer agreement signed)</td>
+          <td>You + lawyer</td>
+          <td>₹50K–₹1L</td>
+          <td>Drug license roadmap</td>
+        </tr>
+        <tr>
+          <td>Week 2</td>
+          <td>Open business bank account (HDFC/ICICI — pharma-friendly)</td>
+          <td>You</td>
+          <td>₹0</td>
+          <td>Business account active</td>
+        </tr>
+        <tr>
+          <td>Week 2</td>
+          <td>Apply for GST registration</td>
+          <td>CA or you</td>
+          <td>₹0</td>
+          <td>GSTIN in 3–5 days</td>
+        </tr>
+        <tr>
+          <td>Week 3</td>
+          <td>Reach out to 10 endocrinologists / physicians via LinkedIn for partnership</td>
+          <td>You</td>
+          <td>₹0</td>
+          <td>3–5 interested doctors</td>
+        </tr>
+        <tr>
+          <td>Week 3</td>
+          <td>Begin wholesale drug license application (via consultant)</td>
+          <td>Regulatory consultant</td>
+          <td>₹5–15K (fees)</td>
+          <td>Application submitted</td>
+        </tr>
+        <tr>
+          <td>Week 3</td>
+          <td>Start building Next.js project — patient onboarding + health quiz MVP</td>
+          <td>You (dev)</td>
+          <td>₹0 (your time)</td>
+          <td>Working prototype</td>
+        </tr>
+        <tr>
+          <td>Week 4</td>
+          <td>Post job listing for Registered Pharmacist (Naukri, LinkedIn)</td>
+          <td>You</td>
+          <td>₹5–10K (job ads)</td>
+          <td>Candidates pipeline</td>
+        </tr>
+        <tr>
+          <td>Week 4</td>
+          <td>Scout cold-chain warehouse space (Bangalore / Mumbai / Delhi)</td>
+          <td>You + consultant</td>
+          <td>₹0 (search phase)</td>
+          <td>2–3 shortlisted locations</td>
+        </tr>
+        <tr>
+          <td>Week 4</td>
+          <td>Commission first 10 SEO articles (medical writer or Contentmart)</td>
+          <td>You (brief) + writer</td>
+          <td>₹20–40K</td>
+          <td>Content pipeline started</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert alert-yellow" style="margin-top:24px">
+    <div class="alert-icon">⚡</div>
+    <div>
+      <strong>Timing matters:</strong> HealthifyRx and Apollo are moving fast into this space. The semaglutide patent cliff (March 2026) is the starting gun. Your 6-month head start on a specialized, beautifully built platform is your moat — use it. The first credible, well-designed Indian platform in this niche will own the SEO and brand trust for years.
+    </div>
+  </div>
+</section>
+
+</div><!-- /container -->
+
+<!-- ════════ FOOTER ════════ -->
+<div class="footer">
+  <p style="margin-bottom:8px">Prepared for internal review — <strong>Confidential</strong></p>
+  <p>GLP-1 Metabolic Health Platform — India Go-To-Market Blueprint · April 2026</p>
+  <p style="margin-top:12px;font-size:11px;color:rgba(136,146,164,0.6)">This document is for planning purposes only. All regulatory and legal matters must be verified with a qualified pharma regulatory lawyer before acting.</p>
+</div>
+
+</body>
+</html>
